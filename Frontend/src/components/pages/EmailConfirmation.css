@@ -1,0 +1,43 @@
+.emailconf-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #00756a;
+    overflow: hidden;
+}
+
+.emailconf-form {
+    width: 420px;
+    background: transparent;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    color: #fff;
+    border-radius: 10px;
+    padding: 30px 40px;
+    position: relative;
+    z-index: 1;
+}
+
+.emailconf-form h2 {
+    font-size: 36px;
+    text-align: center;
+}
+
+.emailconf-link p {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.emailconf-image {
+    position: absolute;
+    bottom: 50%;
+    right: 60%;
+    width: 400px;
+    height: 400px;
+    z-index: 0;
+    opacity: 0.9;
+}

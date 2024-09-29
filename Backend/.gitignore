@@ -1,0 +1,36 @@
+# Ignore build outputs
+bin/
+obj/
+
+# User-specific files
+*.user
+*.rsuser
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Logs
+*.log
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Ignore sensitive configuration files
+appsettings.json
+appsettings.Development.json
+
+# Ignore secrets or API keys
+secret.json
+
+# Visual Studio specific files
+.vscode/
+.idea/
+
+# Ignore Rider specific files
+.idea/
+*.sln.iml
+
+# Ignore dependency folders
+node_modules/
+.vs

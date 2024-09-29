@@ -1,0 +1,280 @@
+.quiz-body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    position: relative;
+}
+
+.quiz-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    /* background: linear-gradient(to bottom, #5fafae, #00756a); */
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+
+    z-index: 1000;
+}
+
+/* Timer styles */
+.quiz-body .flip-clock {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.quiz-body .flip-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    /* Reduced gap between label and card */
+}
+
+.quiz-body .flip-card h1 {
+    font-size: 1.2em;
+    /* Decrease label font size */
+    color: rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+}
+
+.quiz-body .flip-card .card {
+    width: 60px;
+    /* Reduce width */
+    height: 40px;
+    /* Reduce height */
+    border-radius: 5px;
+    /* Adjust border radius accordingly */
+    background: hsla(151, 67%, 70%, 0.612);
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 2em;
+    /* Decrease number font size */
+    font-weight: bold;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.quiz-body .flip-card .card:before,
+.quiz-body .flip-card .card:after {
+    content: '';
+    position: absolute;
+    width: 5px;
+    /* Reduce width */
+    height: 5px;
+    /* Reduce height */
+    background: hsl(235, 16%, 14%);
+}
+
+.timer {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.quiz-body .flip-card .card:before {
+    top: -2.5px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50% 50% 0 0;
+}
+
+.quiz-body .flip-card .card:after {
+    bottom: -2.5px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 0 0 50% 50%;
+}
+
+
+.quiz-container {
+    background-color: rgba(255, 255, 255, 0.3);
+    /* Slightly transparent white background */
+    backdrop-filter: blur(10px);
+    /* Blur effect */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 400px;
+    text-align: center;
+    margin-top: 150px;
+    /* Add margin to account for fixed header */
+}
+
+.question-section {
+    margin-bottom: 20px;
+}
+
+.question-count {
+    margin-bottom: 10px;
+}
+
+.question-text {
+    margin-bottom: 20px;
+}
+
+.answers {
+    display: block;
+    /* Set it to block to allow full width of the container */
+    gap: 10px;
+}
+
+.answer {
+    width: calc(100% - 20px);
+    /* 100% width minus 10px margin on each side */
+    margin-left: 10px;
+    /* Add 10px margin to the left */
+    margin-right: 10px;
+    /* Add 10px margin to the right */
+    padding: 10px;
+    font-size: 18px;
+    border: 2px solid transparent;
+    border-radius: 90px;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+    position: relative;
+    padding-left: 50px;
+    /* Leave space for the circle */
+    box-sizing: border-box;
+    /* Add space for the circle */
+}
+
+.answer:nth-child(1) {
+    background-color: rgb(240 113 113);
+    border-color: #ff6b6b;
+}
+
+.answer:nth-child(2) {
+    background-color: #f5ad58;
+    border-color: #ffb74a;
+}
+
+.answer:nth-child(3) {
+    background-color: #c4c843;
+    border-color: #e1e547;
+}
+
+.answer:nth-child(4) {
+    background-color: #5dd943;
+    border-color: #74e56e;
+}
+
+.answer:hover {
+    opacity: 0.8;
+    border-color: #333;
+}
+
+.answer.selected {
+    border-color: #000;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #616c97a6;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 2px solid #333;
+}
+
+.navigation-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.prev-button,
+.next-button,
+.submit-button {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 20px;
+    background-color: #00796b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.return-button {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 20px;
+    background-color: #00796b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.prev-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.prev-button:hover:enabled,
+.next-button:hover,
+.submit-button:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.score-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.score-section h2 {
+    color: #2b6b2d;
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.score-section p {
+    font-size: 18px;
+    color: #333;
+    margin: 5px 0;
+}
+
+.trophy-image {
+    width: 100px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+
+
+.picture {
+    position: absolute;
+    top: 50%;
+    /* Position the illustration at the vertical center */
+    right: 5%;
+    /* Adjust the right margin */
+    transform: translateY(-50%);
+    /* Center the illustration vertically */
+    width: 40%;
+    margin-left: auto;
+    height: auto;
+}

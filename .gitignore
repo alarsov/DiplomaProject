@@ -1,0 +1,6 @@
+
+Frontend/.env
+Frontend/src/api/bartAPI.js
+Frontend/src/api/flashcardGenerating.js
+Frontend/src/api/questionGenerating.js
+Frontend/src/api/reportGenerating.js

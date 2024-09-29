@@ -1,0 +1,54 @@
+body {
+    background: #5fafae;
+}
+
+.containerUserInfo {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+    background: #d0d6d6;
+}
+
+.password-requirements {
+    font-size: 0.9em;
+    color: #000;
+    /* Set the text color to black */
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.password-requirements ul {
+    padding-left: 20px;
+    /* Adds padding to the left for the list */
+    list-style-type: disc;
+    /* Ensures the list uses bullets */
+}
+
+.password-requirements li {
+    color: #000;
+    /* Ensures list items are black */
+}
+
+.form-control:focus {
+    box-shadow: none;
+    border-color: #00756a;
+}
+
+.profile-button:hover {
+    background: #00756a;
+}
+
+.profile-button:focus {
+    background: #00756a;
+    box-shadow: none;
+}
+
+.profile-button:active {
+    background: #033833;
+    box-shadow: none;
+}
+
+.labels {
+    font-size: 11px;
+    color: #00756a;
+}

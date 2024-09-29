@@ -1,0 +1,215 @@
+/* Main container holding the images, text, and quiz button */
+#container-quiz {
+    display: flex;
+    justify-content: center;
+    min-height: 60vh;
+    align-items: center;
+    text-align: center;
+    background-color: #f9f9f9;
+    padding: 20px;
+    flex-wrap: wrap;
+    /* Allows items to wrap on smaller screens */
+}
+
+/* Text container */
+#text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2%;
+}
+
+/* Headline */
+#container-quiz h1 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Description */
+#container-quiz p {
+    font-size: 1.2em;
+    color: #666;
+    margin: 0;
+    max-width: 300px;
+}
+
+/* Side images */
+.side-image {
+    width: 40vh;
+    /* Adjusted to ensure responsiveness */
+    height: 40vh;
+    margin: 20px;
+}
+
+/* Start quiz button */
+#start-quiz-button {
+    margin-top: 20px;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    color: white;
+    background-color: #1abc9c;
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0 4px 9px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Button hover effect */
+#start-quiz-button:hover {
+    background-color: #16a085;
+}
+
+/* Content container holding materials and settings */
+#content-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    flex-wrap: wrap;
+    /* Ensures the columns stack on smaller screens */
+}
+
+/* Materials and settings containers */
+#materials-container,
+#settings-container {
+    width: 45%;
+    margin-bottom: 20px;
+    /* Adds spacing on smaller screens */
+}
+
+/* Material and settings headlines */
+#materials-container h2,
+#settings-container h2 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Material list styles */
+#materials-container ul {
+    list-style: none;
+    padding: 0;
+
+}
+
+#materials-container li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+    /* Ensure li elements do not exceed the container's width */
+    box-sizing: border-box;
+}
+
+/* Material checkbox styles */
+#materials-container input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+/* Settings container item styling */
+.setting-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.setting-item label {
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+/* Settings select dropdown */
+.setting-item select {
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+}
+
+.green-switch .form-check-input {
+    background-color: #7aecaa !important;
+    /* Green background */
+    border-color: #3d7049 !important;
+    /* Green border */
+}
+
+.green-switch .form-check-input:checked {
+    background-color: #16a085 !important;
+    /* Green color when checked */
+    border-color: #16a085 !important;
+    /* Green border when checked */
+}
+
+.switch-wrapper {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    /* Optional: adjust padding */
+}
+
+.switch-wrapper label {
+    margin-left: 10px;
+    /* Adjust space between switch and label */
+}
+
+
+/* Media query for smaller screens (tablets and below) */
+@media (max-width: 768px) {
+
+    /* Stack side images and text vertically */
+    #container-quiz {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Side images will shrink on smaller screens */
+    .side-image {
+        width: 30vh;
+        height: 30vh;
+    }
+
+    /* Materials and settings will take full width */
+    #materials-container,
+    #settings-container {
+        width: 100%;
+    }
+}
+
+/* Media query for very small screens (mobile devices) */
+@media (max-width: 576px) {
+
+    /* Adjust font sizes for smaller screens */
+    #container-quiz h1 {
+        font-size: 1.5em;
+    }
+
+    #container-quiz p {
+        font-size: 1em;
+        max-width: 100%;
+    }
+
+    #start-quiz-button {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+
+    /* Adjust the size of side images even more */
+    .side-image {
+        width: 25vh;
+        height: 25vh;
+    }
+
+    /* Reduce padding inside content container */
+    #content-container {
+        padding: 10px;
+    }
+}
